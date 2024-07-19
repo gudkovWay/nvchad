@@ -55,6 +55,24 @@ return {
     },
   },
   {
+    "nvim-pack/nvim-spectre",
+    lazy = true,
+    keys = {
+      {
+        "<Leader>pr",
+        "<cmd>lua require('spectre').open_visual({select_word=true})<CR>",
+        desc = "refactor",
+      },
+      {
+        "<Leader>pr",
+        "<cmd>lua require('spectre').open_visual()<CR>",
+        mode = "v",
+        desc = "refactor",
+      },
+    },
+  },
+
+  {
     "mfussenegger/nvim-lint",
     event = "VeryLazy",
     config = function()
@@ -232,9 +250,5 @@ return {
         },
       }
     end,
-  },
-  {
-    "giusgad/pets.nvim",
-    dependencies = { "MunifTanjim/nui.nvim", "giusgad/hologram.nvim" },
   },
 }

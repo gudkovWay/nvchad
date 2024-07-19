@@ -5,7 +5,7 @@
 local M = {}
 
 M.ui = {
-  theme = "tokyodark",
+  theme = "tokyonight",
   transparency = true,
   statusline = {
     theme = "minimal",
