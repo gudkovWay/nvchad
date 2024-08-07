@@ -2,7 +2,7 @@
 
 
 ** First of all:
-****** thanks this <a href="https://github.com/mgastonportillo/nvchad-config">man</a>. I use this conf for change by me.
+****** thanks this [[https://github.com/mgastonportillo/nvchad-config][man]]. I use this conf for change by me.
 
  |--------+--------------------------------------|
  | OS     | Arch Linux                           |
