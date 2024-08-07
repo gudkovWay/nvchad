@@ -1,0 +1,15 @@
+#+title: NVCHAD v2.5 config
+
+
+** First of all:
+****** thanks this <a href="https://github.com/mgastonportillo/nvchad-config">man</a>. I use this conf for change by me.
+
+ |--------+--------------------------------------|
+ | OS     | Arch Linux                           |
+ |--------+--------------------------------------|
+ | Nvim   | v.0.10+                              |
+ |--------+--------------------------------------|
+ | Nvchad | v.2.5                                |
+ |--------+--------------------------------------|
+ | For    | Frontend (React Vue&TS) & C & Python |
+ |--------+--------------------------------------|

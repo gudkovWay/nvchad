@@ -1,0 +1,21 @@
+{
+	"Component via classNames import & interface Props": {
+		"prefix": "rafci",
+		"body": [
+			"import { classNames } from 'shared/lib/helpers/classNames/classNames';",
+			"import cls from './${1:$(basename)}.module.scss';",
+			"",
+			"interface ${1:$(basename)}Props {",
+			"  className?: string;",
+			"}",
+			"",
+			"export const ${1:$(basename)} = ({ className }: ${1:$(basename)}Props) => {",
+			"  return (",
+			"    <div className={classNames(cls.${1:$(basename)}, {}, [className])}>",
+			"    </div>",
+			"  );",
+			"};"
+		],
+		"description": "Generate a functional React component with TypeScript."
+	}
+}
