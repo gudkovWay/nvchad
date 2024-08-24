@@ -8,8 +8,6 @@ map("n", "<C-c>", "<cmd>%y+<CR>", { desc = "Copy file content" })
 map("n", "z-", "z^", { desc = "Remap z^ into z- to match z+" })
 map("n", "<Esc>", "<cmd>noh<CR>", { desc = "Clear search highlights" })
 map("n", "<leader>cs", "<cmd><CR>", { desc = "Clear statusline" })
-vim.cmd [[nnoremap <C-z> <nop>]] -- map didn't work here
-map("n", "<leader><F4>", "<cmd>stop<CR>", { desc = "Stop NVIM" })
 map("n", "<leader>cm", "<cmd>mes clear<CR>", { desc = "Clear messages" })
 -- https://github.com/neovim/neovim/issues/2048
 map("i", "<A-BS>", "<C-w>", { desc = "Remove word" })
@@ -67,20 +65,22 @@ map("n", "<leader>ch", "<cmd>NvCheatsheet<CR>", { desc = "Toggle nvcheatsheet" }
 map("t", "<C-x>", "<C-\\><C-N>", { desc = "Term escape terminal mode" })
 
 map({ "n", "t" }, "<C-\\>", function()
+  local project_root = vim.fn.getcwd()
   require("nvchad.term").toggle {
     pos = "vsp",
     id = "vtoggleTermLoc",
-    cmd = "cd " .. vim.fn.expand "%:p:h",
+    cmd = "cd " .. project_root,
   }
 end, { desc = "Term toggle vertical split in buffer location" })
 
 map({ "n", "t" }, "<C-]>", function()
+  local project_root = vim.fn.getcwd()
   require("nvchad.term").toggle {
     pos = "sp",
     id = "htoggleTermLoc",
-    cmd = "cd " .. vim.fn.expand "%:p:h",
+    cmd = "cd " .. project_root,
   }
-end, { desc = "Term toggle horizontal split in buffer location" })
+end, { desc = "Term toggle horizontal split in project location" })
 
 map({ "n", "t" }, "<C-f>", function()
   require("nvchad.term").toggle { pos = "float", id = "floatTerm" }
@@ -108,6 +108,9 @@ map({ "n", "v" }, "<leader>it", function()
 end, { desc = "TreeSitter toggle inspect tree" })
 
 map("n", "<leader>ii", "<cmd>Inspect<CR>", { desc = "TreeSitter inspect under cursor" })
+
+-- Trouble
+map("n", "<leader>cd", "<cmd>Trouble diagnostics<CR>", { desc = "Trouble diagnostics" })
 
 -- LSP
 map("n", "<leader>ds", vim.diagnostic.setloclist, { desc = "LSP diagnostic loclist" })

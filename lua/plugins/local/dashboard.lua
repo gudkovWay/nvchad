@@ -12,6 +12,7 @@ return {
       directories = {
         "~/.config/nvim/",
         "~/dev/education/",
+        "~/dev/personal/",
         "~/dev/work/",
         "~/dev/hh/",
       },

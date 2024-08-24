@@ -9,24 +9,24 @@ return {
     local on_attach = require("gale.custom").custom_on_attach
 
     local servers = {
-      "astro",
+      -- "astro",
       "bashls",
-      "clangd",
-      -- "css_variables",
+      -- "clangd",
+      "css_variables",
       "cssls",
       "eslint",
       "html",
-      "hls",
+      -- "hls",
       "gopls",
       "jsonls",
       "marksman",
       "ocamllsp",
       "pyright",
       "somesass_ls",
-      -- "tailwindcss",
-      "taplo",
+      "tailwindcss",
+      -- "taplo",
       "yamlls",
-      "zls",
+      -- "zls",
     }
 
     for _, lsp in ipairs(servers) do

@@ -5,12 +5,11 @@
 local M = {}
 
 M.ui = {
-  transparency = true,
-  theme = "bearded-arc",
-  theme_toggle = { "bearded-arc", "chadracula-evondev" },
+  theme = "ayu_dark",
+  theme_toggle = { "ayu_dark", "chadracula-evondev" },
 
   statusline = {
-    theme = "vscode_colored",
+    theme = "default",
     order = {
       "mode",
       "tint",

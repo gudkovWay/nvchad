@@ -7,6 +7,8 @@ return {
   { import = "plugins.local.codeium" },
   { import = "plugins.local.ascii" },
   { import = "plugins.local.dashboard" },
+  { import = "plugins.local.i18n" },
+  { import = "plugins.local.refactor" },
   { import = "plugins.spec.autosession" },
   { import = "plugins.spec.better-escape" },
   { import = "plugins.spec.ccc" },

@@ -17,5 +17,24 @@
 			"};"
 		],
 		"description": "Generate a functional React component with TypeScript."
+	},
+	"Component via interface Props": {
+		"prefix": "raffci",
+		"body": [
+			"import { classNames } from '@/features/helpers/className';",
+			"import cls from './${TM_FILENAME_BASE}.module.scss';",
+			"",
+			"interface ${TM_FILENAME_BASE}Props {",
+			"  className?: string;",
+			"}",
+			"",
+			"export const $TM_FILENAME_BASE = ({ className }: ${TM_FILENAME_BASE}Props) => {",
+			"  return (",
+			"    <div className={classNames(cls.${TM_FILENAME_BASE}, {}, [className])}>",
+			"    </div>",
+			"  );",
+			"};"
+		],
+		"description": "Generate a functional React component with TypeScript."
 	}
 }

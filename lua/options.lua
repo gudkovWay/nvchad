@@ -25,7 +25,7 @@ local opt = {
   scrolloff = 10,
   -- True color support
   termguicolors = true,
-  emoji = false,
+  emoji = true,
   relativenumber = true,
   -- Line break/wrap behaviours
   wrap = true,
